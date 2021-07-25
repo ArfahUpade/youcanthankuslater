@@ -99,7 +99,7 @@ Output:<br />
 
 Action 9:<br />
 
-    <p align="center">
+   <p align="center">
 <img width="426" alt="9" src="https://user-images.githubusercontent.com/56472876/126908510-88388b19-538e-4ca4-a762-3b555b175f22.PNG">
 </p>
 
@@ -109,7 +109,7 @@ Output:<br />
 
 Action 10:<br />
 
-      <p align="center">
+   <p align="center">
 <img width="499" alt="10" src="https://user-images.githubusercontent.com/56472876/126908520-25c87ccd-91c2-40fe-8226-b9896cbf5dd8.PNG">
 </p>
 
@@ -121,7 +121,7 @@ Outputs:<br />
 
 Action 11:<br />
 
-        <p align="center">
+   <p align="center">
 <img width="651" alt="INPUT - 11 (screen)" src="https://user-images.githubusercontent.com/56472876/126908564-01b446e8-7297-42cb-9b93-92b3c604f91a.PNG">
 </p>
 
@@ -131,7 +131,7 @@ Output:<br />
 
 Action 12:<br />
 
-          <p align="center">
+ <p align="center">
 <img width="370" alt="INPUT - 12 (screen)" src="https://user-images.githubusercontent.com/56472876/126908574-bacbf4ca-3cd4-4e35-86e0-36fe68d01212.PNG">
 </p>
 
@@ -141,7 +141,7 @@ Output:<br />
 
 Action 13:<br />
 
-            <p align="center">
+<p align="center">
 <img width="451" alt="INPUT - 13 (screen)" src="https://user-images.githubusercontent.com/56472876/126908607-a6bb74c5-ebaa-48c9-aa24-169ecfb40fed.PNG">
 </p>
 
@@ -151,7 +151,7 @@ Output:<br />
 
 Action 14:<br />
 
-              <p align="center">
+   <p align="center">
 <img width="450" alt="INPUT - 14 (screen)" src="https://user-images.githubusercontent.com/56472876/126908617-f14d8470-e9b7-45b2-9cee-0d3e63dc0500.PNG">
 </p>
 
@@ -161,7 +161,7 @@ Output:<br />
 
 Action 15:<br />
 
-                <p align="center">
+ <p align="center">
 <img width="217" alt="15" src="https://user-images.githubusercontent.com/56472876/126908621-625a7b4d-dafb-4a13-9668-f26de27b314c.PNG">
 </p>
 
@@ -171,7 +171,7 @@ Output:<br />
 
 Action 16:<br />
 
-                  <p align="center">
+ <p align="center">
 <img width="645" alt="16" src="https://user-images.githubusercontent.com/56472876/126908630-dca096f8-d135-443c-8c5f-84eb1fe31381.PNG">
 </p>
 
@@ -181,7 +181,7 @@ Output:<br />
 
 Action 17:<br />
 
-                    <p align="center">
+<p align="center">
 <img width="439" alt="17" src="https://user-images.githubusercontent.com/56472876/126908640-94b04637-8a90-4e94-b36a-f987a6cc5b11.PNG">
 </p>
 
@@ -191,54 +191,54 @@ Output:<br />
 
 Action 18:<br />
 
-                      <p align="center">
+ <p align="center">
 <img width="644" alt="18" src="https://user-images.githubusercontent.com/56472876/126908658-c455fcc0-5486-47c8-8766-6d57a5198a5d.PNG">
 </p>
 
 Action 19:<br />
 
-                        <p align="center">
+<p align="center">
 <img width="569" alt="19" src="https://user-images.githubusercontent.com/56472876/126908674-2659a9e2-31ce-44c0-8c90-fa3f9600aecb.PNG">
 </p>
 
 Action 20:<br />
 
-                          <p align="center">
+ <p align="center">
 <img width="241" alt="20" src="https://user-images.githubusercontent.com/56472876/126908676-a17730a7-20e4-448b-a390-d22e60c15aad.PNG">
 </p>
 
 Action 21:<br />
 
-                            <p align="center">
+ <p align="center">
 <img width="651" alt="21" src="https://user-images.githubusercontent.com/56472876/126908681-b1c42e3c-e1f5-4b09-a04e-76099e888351.PNG">
 </p>
 
 Action 22:<br />
 
-                              <p align="center">
+ <p align="center">
 <img width="650" alt="22" src="https://user-images.githubusercontent.com/56472876/126908700-6c3a49c1-2577-4958-a801-1eea2652c42b.PNG">
 </p>
 
 Action 23:<br />
 
-                                <p align="center">
+<p align="center">
 <img width="158" alt="23" src="https://user-images.githubusercontent.com/56472876/126908702-e44faa41-7ee0-49e8-bf41-62463dc638ef.PNG">
 </p>
 
 Action 24:<br />
 
-                                  <p align="center">
+ <p align="center">
 <img width="651" alt="24" src="https://user-images.githubusercontent.com/56472876/126908707-f1ff32f7-63a0-423e-b31d-1f66197b8cd1.PNG">
 </p>
 
 Action 25:<br />
 
-                                    <p align="center">
+ <p align="center">
 <img width="653" alt="25" src="https://user-images.githubusercontent.com/56472876/126908709-2eac7547-557e-49cd-819a-66bc724f8abe.PNG">
 </p>
 
 Action 26:<br />
 
-                                      <p align="center">
+<p align="center">
 <img width="242" alt="26" src="https://user-images.githubusercontent.com/56472876/126908721-a85d3080-4c3a-47a9-aada-b67ca1f2dfb8.PNG">
 </p>
