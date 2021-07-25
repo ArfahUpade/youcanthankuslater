@@ -1,0 +1,185 @@
+#!/bin/bash
+sudo apt-get install boxes
+echo ""
+echo -e "\n\t***\n\tYOUCANTHANKUSLATER\n\t***\n\tMade by:\n\tARFAH UPADE and SHWETA PAI" | boxes -d spring -a c
+label() {
+echo ""
+echo -e  "Hello.\nWhat would you like to do today?\n1. File Transferring\n2. Terminal Sharing\n3. Send Message/Chat\n"
+echo -e "Please enter 1 or 2 or 3\n"
+read a
+
+if [ "$a" == "1" ]
+then
+echo -e "Select mode of transfer"
+echo -e "1. Transfer file to another machine\n2. Recieve file from another machine"
+echo -e "Please enter 1 or 2\n"
+read choice
+if [ "$choice" == "1" ];
+then
+   echo -e "How many files do you want to transfer?\n1. A Single File\n2. A Directory"
+echo -e "Please enter 1 or 2\n"
+read number
+
+if [ "$number" == "1" ];
+then
+   echo -e "Enter location of file, example: Desktop\n"
+read location
+cd $location
+ls
+echo ""
+read -p "Name of file to be transferred : " filename
+read -p "Enter Username of recieving user : " username
+read -p "Enter the IP Address of the recieving user : " ip
+read -p "Destination path : " dest
+
+scp $filename $username@$ip:$dest
+cd
+echo ""
+echo -e "\e[7mProcedure Completed!\e[0m"
+else
+   read -p "Enter the directory location, example Desktop: " dirname
+echo ""
+cd $dirname
+ls
+echo ""
+read -p "Name of directory whose files are to be transferred : " filename
+read -p "Enter Username of recieving user : " username
+read -p "Enter the IP Address of the recieving user : " ip
+read -p "Destination path : " dest
+
+scp -r $filename $username@$ip:$dest
+cd
+echo ""
+echo -e "\e[7mProcedure Completed!\e[0m"
+fi
+else
+#user1=$(whoami)
+echo ""
+echo -e "NOTE: Only a \e[5mSingle File\e[0m can be recieved."
+echo ""
+read -p "Enter Sender's Username : " sendun
+read -p "Enter Sender's IP Address : " sendip
+read -p "Enter location of file : " sendloco
+#cd $sendloco
+#ls
+read -p "Filename  : " sendfile
+read -p "Destination path : " dest
+
+scp $sendun@$sendip:$sendloco/$sendfile $dest
+#echo -e "Enter the password again\n"
+#PLEASE FIND A WAY TO AVOID ASKING PASSWORD TWICE!
+#ssh -t $sendun@$sendip  'export DISPLAY=:0 
+#notify-send "ATTENTION : File Transferred" "'$user1' recieved '$sendfile' in '$sendloco' from your machine"'
+echo ""
+echo -e "\e[7mProcedure Completed!\e[0m"
+echo ""
+echo "Contents of "$dest" are now:"
+echo ""
+ls $dest
+fi
+fi
+if [ "$a" == "2" ];
+then
+#sudo apt-get install screen
+#sudo apt-get install ssh libnotify-bin
+# The above needs to be installed on both machines for this code to work!
+# NOTE: If export-notify-send doesn't work, use what you have used for Send Messages
+
+read -p "Enter username of other user: " usern
+read -p "Enter IP of other user: " IPaddress
+read -p "Give session name : " sessname
+echo ""
+echo -e "\e[1m(Note: If system doesn't ask password after some duration, check IP Address to make sure it's correct)\e[0m"
+echo ""
+#cat command.sh | 
+ssh -t $usern@$IPaddress  'export DISPLAY=:0 
+notify-send "PLEASE TYPE:" "screen -x '$sessname'" && screen -S '$sessname'' 
+#<<'EOSSH'
+#<< EOF 
+#EOSSH
+#EOF
+fi
+if [ "$a" == "3" ];
+then
+echo -e "Please select :\n1. Send Message\n2. Chat \n " 
+read selection
+if [ "$selection" == "1" ];
+then
+echo ""
+echo -e "Is the recipient logged in to :\n1. This machine\n2. Another machine\n"
+echo -e "Please enter 1 or 2\n"
+read log
+if [ "$log" == "1" ];
+then
+curruser=$(whoami)
+w
+echo ""
+read -p "Enter ONLY DIGIT under TTY column of recepient : " digit
+read -p "Your message : " message
+sudo echo "" > /dev/pts/$digit
+sudo echo "******YOU HAVE A MESSAGE FROM $curruser********" > /dev/pts/$digit
+sudo echo "" > /dev/pts/$digit
+sudo echo $message > /dev/pts/$digit
+sudo echo "" > /dev/pts/$digit
+sudo echo -e "\e[1mWant to reply? Use command 'youcanthankuslater'\e[0m" > /dev/pts/$digit
+sudo echo "" > /dev/pts/$digit
+sudo echo "**********************************************" > /dev/pts/$digit
+echo ""
+echo -e "\e[7mProcedure Completed!\e[0m"
+echo ""
+else
+curruser=$(whoami)
+read -p "Enter username of other user: " un
+read -p "Enter IP of other user: " IPadd
+ssh -t $un@$IPadd bash -c '
+w
+echo ""
+read -p "Enter ONLY DIGIT under TTY column of recepient : " digit
+read -p "Your message : " message
+sudo echo "" > /dev/pts/$digit
+sudo echo "******YOU HAVE A MESSAGE FROM '$curruser'********" > /dev/pts/$digit
+sudo echo "" > /dev/pts/$digit
+sudo echo $message > /dev/pts/$digit
+sudo echo "" > /dev/pts/$digit
+sudo echo -e "\e[1mWant to reply? Use command 'youcanthankuslater'\e[0m" > /dev/pts/$digit
+sudo echo "" > /dev/pts/$digit
+sudo echo "**********************************************" > /dev/pts/$digit
+echo ""
+echo -e "\e[7mProcedure Completed!\e[0m"
+echo "" '
+fi
+else
+#sudo apt-get install talk
+echo "Weclome to chat!"
+echo ""
+read -p "Enter username of other user: " un
+read -p "Enter IP of other user: " IPadd
+username=$(whoami)
+ssh $un@$IPadd 'export DISPLAY=:0 
+notify-send "PLEASE TYPE:" "talk '$username'@<Ip Address>"';
+talk $un@$IPadd;
+echo -e "Retry? 1. Yes or 2. No :\n "
+read  answer
+if [ "$answer" == "1" ];
+then
+talk $un@$IPadd
+fi
+fi
+fi
+}
+label
+echo ""
+echo -e "Do you want to continue?\n1. Yes\n2. No\nPlease enter 1 or 2\n"
+read cont
+if [ "$cont" == "1" ];
+then
+label
+user=$(whoami)
+echo -e "\n\tBye "$user"\n\t***\n\tYOUCANTHANKUSLATER\n\t***\n\tMade by:\n\tARFAH UPADE and SHWETA PAI" | boxes -d capgirl -a c
+else
+user=$(whoami)
+echo -e "\n\tBye "$user"\n\t***\n\tYOUCANTHANKUSLATER\n\t***\n\tMade by:\n\tARFAH UPADE and SHWETA PAI" | boxes -d capgirl -a c
+fi
+
+
+
